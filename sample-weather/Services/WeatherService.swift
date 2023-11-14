@@ -31,7 +31,7 @@ class WeatherService{
         }.resume()
     }
 
-func getWeathers(_ city: String, compeletion: @escaping (WeatherResponse?) -> ()){
+    func getWeathersa(_ city: String, compeletion: @escaping (WeatherResponse?) -> ()){
         
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=a3205ee94e31e3f427bd2d6339384e23") else{
             compeletion(nil)
@@ -52,5 +52,4 @@ func getWeathers(_ city: String, compeletion: @escaping (WeatherResponse?) -> ()
             }
         }.resume()
     }
-    
 }
